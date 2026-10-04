@@ -14,4 +14,4 @@ or `python3 -m http.server`, then open the printed localhost URL. In VS Code, th
 - support.js — small runtime the page needs to render
 - paper-engine-global.js — generates the paper grain, creases and blue ruling
 - assets/ — font, tape pieces, icons, intro frames (assets/intro), sound effects
-- _ds/ — base stylesheet
+- ds/ — base stylesheet
