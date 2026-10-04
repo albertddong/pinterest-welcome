@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./support.js"></script>
+</head>
+
+<body>
+  <x-dc>
+    <helmet>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Hi Pinterest — Albert Dong</title>
+      <link rel="stylesheet" href="_ds/classical/styles.css">
+      <script src="_ds/classical/_ds_bundle.js"></script>
+      <script src="./paper-engine-global.js"></script>
+      <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <rect width="100" height="100" fill="#eae2d4" />
+          <g stroke="#8aa0b8" stroke-width="1">
+            <path d="M0 30H100M0 50H100M0 70H100M30 0V100M50 0V100M70 0V100" />
+          </g>
+          <circle cx="50" cy="50" r="17" fill="#E60023" />
+        </svg></template>
+      <style>
+        @font-face {
+          font-family: "Albert2";
+          src: url("assets/Albert2-Regular.ttf") format("truetype");
+          font-weight: 400;
+          font-display: block;
+        }
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          background: #eae2d4;
+        }
+
+        a {
+          color: #241d14;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #E60023;
+        }
+
+        a:focus-visible {
+          outline: 2px solid #E60023;
+          outline-offset: 4px;
+        }
+      </style>
+    </helmet>
+    <div ref="{{ rootRef }}"
+      style="position: relative; min-height: 100vh; overflow: hidden; isolation: isolate; background: #eae2d4; font-family: 'Albert2', var(--font-body); color: #241d14;">
+
+      <div ref="{{ toneRef }}" style="position: fixed; inset: -10%; pointer-events: none;"></div>
+      <canvas ref="{{ ruleRef }}"
+        style="position: absolute; left: 0; top: 0; mix-blend-mode: multiply; pointer-events: none;"></canvas>
+      <div ref="{{ fiberRef }}" style="position: absolute; inset: 0; mix-blend-mode: multiply; pointer-events: none;">
+      </div>
+
+      <canvas ref="{{ introRef }}" width="720" height="720"
+        style="position: fixed; left: 50%; top: 50%; width: min(78vmin, 640px); height: auto; aspect-ratio: 1; transform: translate(-50%, -50%); pointer-events: none; opacity: 0; z-index: 5;"></canvas>
+
+      <main ref="{{ letterRef }}"
+        style="position: relative; width: min(780px, calc(100% - 48px)); margin: 0 auto; padding: 60px 60px 60px; box-sizing: border-box; top: 120px; margin-bottom: 300px;">
+
+        <img data-tape="1" data-rest="rotate(-6deg)" src="assets/tape-a.png" alt=""
+          style="position: absolute; left: -64px; top: -52px; width: 200px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-rest="rotate(2.5deg)" src="assets/tape-c.png" alt=""
+          style="position: absolute; right: -30px; top: -30px; width: 300px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-wide="1" data-rest="rotate(-8deg)" src="assets/tape-b.png" data-ding="1" alt=""
+          style="position: absolute; left: -196px; top: 150px; width: 150px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-rest="rotate(1.5deg)" src="assets/tape-d.png" alt=""
+          style="position: absolute; left: -38px; top: 32%; width: 58px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-wide="1" data-rest="rotate(0deg)" src="assets/tape-e.png" alt=""
+          style="position: absolute; right: -280px; top: 250px; width: 250px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-rest="rotate(-2deg)" src="assets/tape-f.png" alt=""
+          style="position: absolute; right: -30px; top: 56%; width: 56px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-rest="rotate(8deg)" src="assets/tape-g.png" alt=""
+          style="position: absolute; left: -58px; bottom: 170px; width: 128px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-rest="rotate(-4deg)" src="assets/tape-h.png" data-fish="1" alt=""
+          style="position: absolute; right: 44px; bottom: 62px; width: 104px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-rest="translateX(-50%) rotate(-1.5deg)" src="assets/tape-i.png" alt=""
+          style="position: absolute; left: 50%; bottom: -26px; width: 360px; opacity: 0; cursor: default;" />
+        <img data-tape="1" data-wide="1" data-rest="rotate(0deg)" src="assets/tape-k.png" alt=""
+          style="position: absolute; left: -240px; bottom: -70px; width: 200px; opacity: 0; cursor: default;" />
+
+        <h1 data-cells="2" data-fill="1.04" data-reveal="1"
+          style="font-family: 'Albert2', var(--font-heading); font-weight: 400; line-height: 60px; margin: 0; color: #E60023; opacity: 0;">
+          Hi Pinterest!</h1>
+
+        <p data-cells="1" data-fill="1.02" data-reveal="1"
+          style="line-height: 30px; margin: 30px 0 0; text-wrap: pretty; opacity: 0;">I’m Albert Dong, I study computer
+          science at Brown University, and I’m applying to Pinterest’s Software Engineer role as a (soon-to-be)
+          University Grad. I’m an artist before a computer scientist, and Pinterest is a large part of why.</p>
+
+        <p data-cells="1" data-fill="1.02" data-reveal="1"
+          style="line-height: 30px; margin: 30px 0 0; text-wrap: pretty; opacity: 0;">I grew up making digital art, and
+          Pinterest was one of the foundational tools I had for developing <span
+            style="background-color: rgba(238,196,60,0.42); -webkit-box-decoration-break: clone; box-decoration-break: clone; padding: 2px 5px 0; margin: 0 -3px; border-radius: 3px;">taste</span>.
+          Pinterest recommendations found me references for stylized paintings, grayscale portraits to practice shading
+          faces, and mood board inspiration for writing stories. Even in my daily life, Pinterest is my go-to for all
+          things outfits, nail designs, and haircuts. Over time, Pinterest has become a record of what caught my eye and
+          why. As AI makes it easier to produce almost anything, I believe taste is becoming a scarce skill, and
+          Pinterest is the product that helps people discover and sharpen theirs.</p>
+
+        <p data-cells="1" data-fill="1.02" data-reveal="1"
+          style="line-height: 30px; margin: 30px 0 0; text-wrap: pretty; opacity: 0;">This conviction shapes my
+          technical work. I’m drawn to human-centered AI and the intersection of software and creative work. Outside of
+          school I’ve built projects across computer vision, graphics, and AI tooling, usually aimed at making complex
+          workflows feel intuitive. Most recently, I developed an AI accessibility remediation tool after seeing Brown
+          faculty struggle to make course content digitally accessible; it has since received funding and has been
+          officially adopted by my university.</p>
+
+        <p data-cells="1" data-fill="1.02" data-reveal="1"
+          style="line-height: 30px; margin: 30px 0 0; text-wrap: pretty; opacity: 0;"><span
+            style="background-color: rgba(238,196,60,0.42); -webkit-box-decoration-break: clone; box-decoration-break: clone; padding: 2px 5px 0; margin: 0 -3px; border-radius: 3px;">Pinterest
+            is my dream job.</span> I can’t overstate how much it has shaped the way I view the world. I would be
+          grateful for the chance to give back to my roots and help build the next generation of artists and curious
+          people. Thank you for your consideration.</p>
+
+        <div data-reveal="1" style="display: flex; flex-direction: column; gap: 0; margin: 60px 0 30px; opacity: 0;">
+          <div style="display: flex; gap: 24px;">
+            <a href="{{ cvHref }}" target="_blank" rel="noopener" onMouseEnter="{{ iconHover }}" aria-label="CV"
+              style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; transition: transform 0.25s cubic-bezier(0.34, 1.5, 0.64, 1);"
+              style-hover="transform: translateY(-5px) rotate(-3deg);">
+              <img src="assets/icon-cv.png" alt=""
+                style="width: 62px; height: 66px; object-fit: contain; mix-blend-mode: multiply;" />
+              <span style="font-size: 15px; letter-spacing: 0.06em;">CV</span>
+            </a>
+            <a href="{{ linkedinHref }}" target="_blank" rel="noopener" onMouseEnter="{{ iconHover }}"
+              aria-label="LinkedIn"
+              style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; transition: transform 0.25s cubic-bezier(0.34, 1.5, 0.64, 1);"
+              style-hover="transform: translateY(-5px) rotate(-3deg);">
+              <img src="assets/icon-linkedin.png" alt=""
+                style="width: 62px; height: 66px; object-fit: contain; mix-blend-mode: multiply;" />
+              <span style="font-size: 15px; letter-spacing: 0.06em;">LinkedIn</span>
+            </a>
+            <a href="{{ githubHref }}" target="_blank" rel="noopener" onMouseEnter="{{ iconHover }}" aria-label="GitHub"
+              style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; transition: transform 0.25s cubic-bezier(0.34, 1.5, 0.64, 1);"
+              style-hover="transform: translateY(-5px) rotate(-3deg);">
+              <img src="assets/icon-github.png" alt=""
+                style="width: 62px; height: 66px; object-fit: contain; mix-blend-mode: multiply;" />
+              <span style="font-size: 15px; letter-spacing: 0.06em;">GitHub</span>
+            </a>
+            <a href="{{ pinterestHref }}" target="_blank" rel="noopener" onMouseEnter="{{ iconHover }}"
+              aria-label="Pinterest"
+              style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; transition: transform 0.25s cubic-bezier(0.34, 1.5, 0.64, 1);"
+              style-hover="transform: translateY(-5px) rotate(-3deg);">
+              <img src="assets/icon-pinterest.png" alt=""
+                style="width: 62px; height: 66px; object-fit: contain; mix-blend-mode: multiply;" />
+              <span style="font-size: 15px; letter-spacing: 0.06em;">Pinterest</span>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <canvas ref="{{ foldRef }}"
+        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; mix-blend-mode: soft-light; opacity: 0; filter: blur(2.8px); pointer-events: none;"></canvas>
+      <div ref="{{ grainLightRef }}"
+        style="position: absolute; inset: 0; mix-blend-mode: screen; pointer-events: none;"></div>
+      <div ref="{{ grainDarkRef }}"
+        style="position: absolute; inset: 0; mix-blend-mode: multiply; pointer-events: none;"></div>
+      <div
+        style="position: fixed; inset: 0; box-shadow: inset 0 0 220px rgba(72,50,28,0.14), inset 0 0 60px rgba(72,50,28,0.05); pointer-events: none;">
+      </div>
+    </div>
+  </x-dc>
+  <script type="text/x-dc" data-dc-script data-props="{
+  &quot;cvUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Links&quot;},
+  &quot;linkedinUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Links&quot;},
+  &quot;githubUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Links&quot;},
+  &quot;pinterestUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Links&quot;},
+  &quot;introVolume&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 10, &quot;min&quot;: 1, &quot;max&quot;: 20, &quot;step&quot;: 0.5, &quot;unit&quot;: &quot;×&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Intro&quot;},
+  &quot;skipIntro&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Intro&quot;},
+  &quot;finalBreakup&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 0.25, &quot;min&quot;: 0, &quot;max&quot;: 1, &quot;step&quot;: 0.05, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Paper&quot;},
+  &quot;lightSeconds&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 24, &quot;min&quot;: 4, &quot;max&quot;: 60, &quot;step&quot;: 1, &quot;unit&quot;: &quot;s&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Paper&quot;}
+}">
+// Paste your links here
+const LINKS = { cv: "https://drive.google.com/file/d/1q--oj-8evvD66ty7Xs8b04j3ulLRsVEl/view?usp=sharing", linkedin: "https://www.linkedin.com/in/albertdong314/", github: "https://github.com/albertddong", pinterest: "https://www.pinterest.com/albertddong/" };
+const SEED = 20260903;
+const SP = 30;
+const INTRO_SECONDS = 3.603;
+const INTRO_FRAMES = 43;
+const INK = { color: "#8aa0b8", opacity: 0.68, wobble: 4, major: 5 };
+
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  toneRef = React.createRef();
+  ruleRef = React.createRef();
+  fiberRef = React.createRef();
+  foldRef = React.createRef();
+  grainLightRef = React.createRef();
+  grainDarkRef = React.createRef();
+  letterRef = React.createRef();
+  introRef = React.createRef();
+
+  async componentDidMount() {
+    this.eng = await this.waitEngine();
+    if (!this.eng) return;
+    const reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const skip = !!this.props.skipIntro || reduced;
+    if (!skip) document.documentElement.style.overflow = "hidden";
+    this.paintStatic();
+    try { await document.fonts.load("28px Albert2"); await document.fonts.ready; } catch (e) {}
+    this.layout();
+    this.buildRuling();
+    this.buildFold();
+    this.drawRuling(skip ? 1 : 0, !skip);
+
+    this._onResize = () => { clearTimeout(this._rt); this._rt = setTimeout(() => this.relayout(), 160); };
+    this._onSkip = () => { if (!this._done && this._started) this.finish(); };
+    window.addEventListener("resize", this._onResize);
+    window.addEventListener("pointerdown", this._onSkip);
+    window.addEventListener("keydown", this._onSkip);
+    this.startLight();
+    this.prepIntroAudio();
+    if (skip) { this._started = true; this.finish(true); }
+    else this.playIntro();
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this._raf); cancelAnimationFrame(this._lraf);
+    window.removeEventListener("resize", this._onResize);
+    window.removeEventListener("pointerdown", this._onSkip);
+    window.removeEventListener("keydown", this._onSkip);
+    document.documentElement.style.overflow = "";
+  }
+
+  waitEngine() {
+    return new Promise((res) => {
+      let n = 0;
+      const t = () => { if (window.PaperEngine) res(window.PaperEngine); else if (n++ > 200) res(null); else setTimeout(t, 25); };
+      t();
+    });
+  }
+
+  target() { return this.props.finalBreakup ?? 0.25; }
+
+  paintStatic() {
+    const e = this.eng;
+    const tone = this.toneRef.current;
+    if (tone) tone.style.backgroundImage = e.TONE_BLOBS.map(([cx, cy, rw, rh, rgb, a]) =>
+      `radial-gradient(${rw * 100}% ${rh * 100}% at ${cx * 100}% ${cy * 100}%, rgba(${rgb},${a}), rgba(${rgb},0) 70%)`).join(", ");
+    const g = { size: 384, density: 0.6, sharpness: 4, clump: 1, octaves: 4, seed: SEED };
+    const set = (ref, url, size, op, pos) => {
+      const el = ref.current; if (!el) return;
+      el.style.backgroundImage = "url(" + url + ")"; el.style.backgroundSize = size;
+      el.style.opacity = String(op); if (pos) el.style.backgroundPosition = pos;
+    };
+    set(this.grainLightRef, e.makeGrain({ ...g, rgb: [255, 252, 244] }), "384px 384px", 0.34);
+    set(this.grainDarkRef, e.makeGrain({ ...g, density: 0.42, sharpness: 4.6, rgb: [58, 42, 26], seed: SEED + 4409 }), "384px 384px", 0.14, "43px 71px");
+    set(this.fiberRef, e.makeFiber(SEED + 7, 4), "760px 760px", 0.15);
+    this._mask = new Image();
+    this._mask.src = e.makeGrain({ size: 128, density: 0.5, sharpness: 1.1, clump: 0.4, octaves: 3, rgb: [255, 255, 255], seed: SEED + 9004 });
+  }
+
+  // fit each run so ascender-to-descender fills its cells, baseline on the rule
+  layout() {
+    const letter = this.letterRef.current, root = this.rootRef.current;
+    if (!letter || !root) return;
+    const ctx = (this._m = this._m || document.createElement("canvas")).getContext("2d");
+    letter.querySelectorAll("[data-cells]").forEach((el) => {
+      const cells = parseFloat(el.getAttribute("data-cells")) || 1;
+      const fill = parseFloat(el.getAttribute("data-fill")) || 0.9;
+      const box = cells * SP;
+      ctx.font = "100px " + getComputedStyle(el).fontFamily;
+      const m = ctx.measureText("Hxpgy");
+      const asc = m.fontBoundingBoxAscent || m.actualBoundingBoxAscent || 80;
+      const desc = m.fontBoundingBoxDescent || m.actualBoundingBoxDescent || 20;
+      const fs = Math.max(8, (box * fill) / ((asc + desc) / 100));
+      el.style.fontSize = fs.toFixed(2) + "px";
+      const a = (asc / 100) * fs, d = (desc / 100) * fs;
+      el.style.position = "relative";
+      el.style.top = (box - d * 0.55 - ((box - (a + d)) / 2 + a)).toFixed(2) + "px";
+    });
+    const wide = innerWidth >= 1240;
+    letter.querySelectorAll("[data-wide]").forEach((el) => { el.style.display = wide ? "" : "none"; });
+    letter.style.transform = "none";
+    const rr = root.getBoundingClientRect(), lr = letter.getBoundingClientRect();
+    const ox = lr.left - rr.left, oy = lr.top - rr.top;
+    const dx = Math.round(ox / SP) * SP - ox, dy = Math.ceil(oy / SP) * SP - oy;
+    letter.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px)`;
+  }
+
+  relayout() {
+    const w = this.rootRef.current ? this.rootRef.current.clientWidth : 0;
+    this.layout();
+    this.buildRuling();
+    this.drawRuling(this._done ? 1 : this._r || 0, !this._done);
+    if (Math.abs(w - (this._foldW || 0)) > 40 || Math.abs(this.docH() - (this._foldH || 0)) > 200) this.buildFold();
+  }
+
+  docH() { const r = this.rootRef.current; return r ? Math.max(r.scrollHeight, innerHeight) : innerHeight; }
+
+  // precompute every ink segment once; per frame only alpha + visibility change
+  buildRuling() {
+    const e = this.eng, root = this.rootRef.current;
+    if (!root) return;
+    const W = root.clientWidth, H = this.docH();
+    this._W = W; this._H = H;
+    const seed = SEED + 9001, seg = 5;
+    const est = Math.ceil((H / SP + 2) * (W / seg + 2) + (W / SP + 2) * (H / seg + 2));
+    const A = { x0: new Float32Array(est), y0: new Float32Array(est), x1: new Float32Array(est), y1: new Float32Array(est),
+      base: new Float32Array(est), cover: new Float32Array(est), n2: new Float32Array(est), order: new Float32Array(est), kind: new Uint8Array(est) };
+    let c = 0;
+    const line = (index, horizontal) => {
+      const len = horizontal ? W : H, at = index * SP;
+      const drift = (e.hash2(index, horizontal ? 1 : 2, seed) - 0.5) * 0.006;
+      const isMajor = index % INK.major === 0;
+      const off = (p) => at + (e.fbm(p / len, index * 0.137 + 4.2, 3, 2, seed + 17) - 0.5) * 2 * INK.wobble + (p - len / 2) * drift;
+      let prev = off(0);
+      for (let s = 0; s < len && c < est; s += seg) {
+        const t0 = s, t1 = Math.min(len, s + seg + 0.6);
+        const n = e.fbm(t0 / len, index * 0.137, 5, 3, seed + (horizontal ? 0 : 733));
+        const n2 = e.hash2(Math.round(t0 / seg), index, seed + 51);
+        let boost = 1;
+        const tc = (t0 + t1) / 2, k = Math.round(tc / SP);
+        if (e.hash2(index + (horizontal ? 0 : 4096), k, seed + 1777) < 0.62) {
+          const d = Math.abs(tc - k * SP), fall = 3.5 + 9 * e.hash2(k, index, seed + 2903);
+          boost = 1 + (0.35 + 0.85 * e.hash2(k, index, seed + 3313)) * Math.exp(-(d / fall) * (d / fall));
+        }
+        const a0 = prev, a1 = off(t1); prev = off(t0 + seg);
+        const mx = horizontal ? tc : at, my = horizontal ? at : tc;
+        const clump = Math.min(1, Math.max(0, (e.fbm(mx / 1400, my / 1400, 3, 3, seed + 99) - 0.3) / 0.4));
+        A.x0[c] = horizontal ? t0 : a0; A.y0[c] = horizontal ? a0 : t0;
+        A.x1[c] = horizontal ? t1 : a1; A.y1[c] = horizontal ? a1 : t1;
+        A.base[c] = INK.opacity * (isMajor ? 1 : 0.78) * boost;
+        A.cover[c] = 0.35 + 0.9 * n;
+        A.n2[c] = n2;
+        A.order[c] = 0.62 * clump + 0.38 * e.hash2(Math.round(t0 / seg) + 7, index + (horizontal ? 0 : 5000), seed + 123);
+        A.kind[c] = (isMajor ? 1 : 0) | (n2 > 0.86 ? 2 : 0);
+        c++;
+      }
+    };
+    for (let i = 1; i < Math.ceil(H / SP) + 1; i++) line(i, true);
+    for (let i = 1; i < Math.ceil(W / SP) + 1; i++) line(i, false);
+    this._seg = A; this._n = c;
+    const cv = this.ruleRef.current, dpr = Math.min(1.5, devicePixelRatio || 1);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    cv.style.width = W + "px"; cv.style.height = H + "px";
+    this._dpr = dpr;
+  }
+
+  // r: 0 = no ink, 1 = settled. breakup eases from full to the final value as segments surface
+  drawRuling(r, viewportOnly) {
+    const A = this._seg, cv = this.ruleRef.current;
+    if (!A || !cv) return;
+    this._r = r;
+    const ctx = cv.getContext("2d"), dpr = this._dpr, W = this._W;
+    const H = viewportOnly ? Math.min(this._H, innerHeight + SP) : this._H;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, viewportOnly ? H : this._H);
+    if (r <= 0) return;
+    const ease = r * r * (3 - 2 * r);
+    const b = 1 + (this.target() - 1) * ease;
+    const R = r * 1.14, skipAt = 0.965 - 0.12 * b, Q = 32;
+    const paths = new Map();
+    for (let i = 0; i < this._n; i++) {
+      if (A.y0[i] > H && A.y1[i] > H) continue;
+      if (A.n2[i] > skipAt) continue;
+      const vis = Math.min(1, Math.max(0, (R - A.order[i]) / 0.14));
+      if (vis <= 0) continue;
+      const bleed = A.kind[i] & 2 ? 1.9 : 1;
+      const fade = 1 - 0.6 * b * (1 - Math.min(1, A.cover[i]));
+      const q = Math.round(Math.min(1, (A.base[i] * fade * vis) / bleed) * Q);
+      if (!q) continue;
+      const key = q * 4 + A.kind[i];
+      let p = paths.get(key);
+      if (!p) { p = new Path2D(); paths.set(key, p); }
+      p.moveTo(A.x0[i], A.y0[i]); p.lineTo(A.x1[i], A.y1[i]);
+    }
+    const rgb = this.eng.hexRgb(INK.color);
+    paths.forEach((p, key) => {
+      const kind = key & 3, q = key >> 2;
+      ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${(q / Q).toFixed(3)})`;
+      ctx.lineWidth = (kind & 1 ? 1.3 : 1) * (kind & 2 ? 1.9 : 1);
+      ctx.stroke(p);
+    });
+    if (this._mask && this._mask.complete && this._mask.naturalWidth) {
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.globalAlpha = 0.3 * b + 0.08;
+      ctx.fillStyle = ctx.createPattern(this._mask, "repeat");
+      ctx.fillRect(0, 0, W, H);
+      ctx.globalAlpha = 1;
+      ctx.globalCompositeOperation = "source-over";
+    }
+  }
+
+  buildFold() {
+    const root = this.rootRef.current;
+    if (!root) return;
+    const W = root.clientWidth, H = this.docH();
+    this._foldW = W; this._foldH = H;
+    const FW = 560, FH = Math.max(200, Math.round((FW * H) / W));
+    this._field = this.eng.buildHeight({ seed: SEED + 31, base: 7, levels: 3, W: FW, H: FH });
+    this._store = {};
+    this.eng.shade(this._field, this.foldRef.current, this._angle ?? 215, 0.95, this._store);
+  }
+
+  // light orbits on its own, seamless loop
+  startLight() {
+    this._angle = 215;
+    let last = 0;
+    const t0 = performance.now();
+    const tick = (now) => {
+      this._lraf = requestAnimationFrame(tick);
+      if (now - last < 70 || !this._field) return;
+      last = now;
+      const period = (this.props.lightSeconds ?? 24) * 1000;
+      this._angle = 215 + (((now - t0) % period) / period) * 360;
+      this.eng.shade(this._field, this.foldRef.current, this._angle, 0.95, this._store);
+    };
+    this._lraf = requestAnimationFrame(tick);
+  }
+
+  prepIntroAudio() {
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      this._ac = new AC();
+      this._introBuf = fetch("assets/sfx-intro.wav").then((r) => r.arrayBuffer())
+        .then((b) => new Promise((res, rej) => this._ac.decodeAudioData(b, res, rej))).catch(() => null);
+    } catch (e) { this._ac = null; }
+    this._frames = Promise.all(Array.from({ length: INTRO_FRAMES }, (_, i) => {
+      const im = new Image(); im.src = "assets/intro/f" + String(i).padStart(2, "0") + ".png";
+      return (im.decode ? im.decode() : new Promise((r) => { im.onload = r; })).then(() => im, () => im);
+    }));
+    try {
+    } catch (e) { this._ac = null; }
+  }
+
+  async playIntroAudio() {
+    const ac = this._ac; if (!ac) return;
+    try { if (ac.state !== "running") await ac.resume(); } catch (e) {}
+    const buf = await this._introBuf; if (!buf) return;
+    const src = ac.createBufferSource(); src.buffer = buf;
+    const gain = ac.createGain(); gain.gain.value = this.props.introVolume ?? 10;
+    const comp = ac.createDynamicsCompressor();
+    comp.threshold.value = -2; comp.knee.value = 2; comp.ratio.value = 20; comp.attack.value = 0.003; comp.release.value = 0.15;
+    src.connect(gain); gain.connect(comp); comp.connect(ac.destination);
+    src.start();
+    return true;
+  }
+
+  // frames are drawn from one clock, so picture, ink and audio stay locked together
+  async playIntro() {
+    const cv = this.introRef.current;
+    const frames = await Promise.race([this._frames, new Promise((r) => setTimeout(() => r(null), 8000))]);
+    if (this._started) return;
+    await Promise.race([this._introBuf, new Promise((r) => setTimeout(r, 1500))]);
+    if (this._started) return;
+    this._started = true;
+    const ctx = cv && cv.getContext("2d");
+    if (cv) cv.style.opacity = "1";
+    const ac = this._ac, useAudio = ac && ac.state === "running";
+    this.playIntroAudio();
+    const a0 = useAudio ? ac.currentTime : 0, t0 = performance.now();
+    let last = -1;
+    const step = (now) => {
+      if (this._done) return;
+      const el = useAudio && ac.state === "running" ? ac.currentTime - a0 : (now - t0) / 1000;
+      const r = Math.min(1, el / INTRO_SECONDS);
+      const fi = Math.min(INTRO_FRAMES - 1, Math.floor((el / INTRO_SECONDS) * INTRO_FRAMES));
+      if (frames && ctx && fi !== last) { ctx.clearRect(0, 0, 720, 720); ctx.drawImage(frames[fi], 0, 0, 720, 720); last = fi; }
+      this.drawRuling(r, true);
+      const fold = this.foldRef.current;
+      if (fold) fold.style.opacity = (0.36 * r * r * (3 - 2 * r)).toFixed(3);
+      if (r < 1) this._raf = requestAnimationFrame(step); else this.finish();
+    };
+    this._raf = requestAnimationFrame(step);
+  }
+
+  finish(instant) {
+    if (this._done) return;
+    this._done = true;
+    cancelAnimationFrame(this._raf);
+    this.drawRuling(1, false);
+    const fold = this.foldRef.current;
+    if (fold) { fold.style.transition = "opacity 0.6s ease"; fold.style.opacity = "0.36"; }
+    const img = this.introRef.current;
+    if (img) { img.style.transition = "none"; img.style.opacity = "0"; img.style.display = "none"; }
+    document.documentElement.style.overflow = "";
+    const letter = this.letterRef.current;
+    if (!letter) return;
+    const k = instant ? 0 : 1;
+    letter.querySelectorAll("[data-reveal]").forEach((el, i) => {
+      el.style.transition = `opacity 0.9s ease ${(0.15 + i * 0.14) * k}s, transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) ${(0.15 + i * 0.14) * k}s`;
+      el.style.transform = "translateY(8px)";
+      requestAnimationFrame(() => requestAnimationFrame(() => { el.style.opacity = "1"; el.style.transform = "none"; }));
+    });
+    letter.querySelectorAll("[data-tape]").forEach((el, i) => {
+      const rest = el.getAttribute("data-rest") || "none";
+      el.style.transform = `${rest} translateY(-10px) scale(1.07)`;
+      el.style.transition = `opacity 0.35s ease ${(1.0 + i * 0.11) * k}s, transform 0.5s cubic-bezier(0.3, 1.5, 0.5, 1) ${(1.0 + i * 0.11) * k}s`;
+      requestAnimationFrame(() => requestAnimationFrame(() => { el.style.opacity = "1"; el.style.transform = rest; }));
+      el.addEventListener("mouseenter", () => this.hoverPiece(el, rest));
+    });
+  }
+
+  playSfx(el) {
+    if (!this._sfx) {
+      const mk = (s, v) => { const a = new Audio(s); a.preload = "auto"; a.volume = v ?? 0.6; return a; };
+      this._sfx = { fish: mk("assets/sfx-fish.mp3", 1), tape: [mk("assets/sfx-tape-1.wav?v=2"), mk("assets/sfx-tape-2.wav"), mk("assets/sfx-tape-3.wav")], ding: mk("assets/sfx-ding.mp3"), icon: mk("assets/sfx-icon.wav") };
+    }
+    const tapes = [...this.letterRef.current.querySelectorAll("[data-tape]:not([data-fish]):not([data-ding])")];
+    const src = el === "icon" ? this._sfx.icon : el.hasAttribute("data-fish") ? this._sfx.fish : el.hasAttribute("data-ding") ? this._sfx.ding : this._sfx.tape[Math.max(0, tapes.indexOf(el)) % 3];
+    const a = src.cloneNode(); a.volume = src.volume;
+    a.play().catch(() => {});
+  }
+
+  hoverPiece(el, rest) {
+    if (el._anim && el._anim.playState === "running") return;
+    this.playSfx(el);
+    if (el.getAnimations) el.getAnimations().forEach((a) => a.cancel());
+    el.style.transition = "none";
+    const R = rest === "none" ? "" : rest + " ";
+    if (el.hasAttribute("data-fish")) {
+      const from = el._rot || 0, to = from + 180;
+      el._rot = to;
+      el._anim = el.animate([
+        { transform: R + "rotate(" + from + "deg)" },
+        { transform: R + "rotate(" + to + "deg)" }
+      ], { duration: 520, easing: "cubic-bezier(0.34, 1.4, 0.5, 1)", fill: "forwards" });
+      el._anim.onfinish = () => { el.style.transform = R + "rotate(" + to + "deg)"; el._anim.cancel(); };
+      return;
+    }
+    const frames = [
+          { transform: R + "translateY(0) rotate(0deg) scale(1)" },
+          { transform: R + "translateY(-5px) rotate(-2.5deg) scale(1.04)", offset: 0.3 },
+          { transform: R + "translateY(-2px) rotate(1.8deg) scale(1.03)", offset: 0.55 },
+          { transform: R + "translateY(-1px) rotate(-0.8deg) scale(1.01)", offset: 0.78 },
+          { transform: R + "translateY(0) rotate(0deg) scale(1)" }
+        ];
+    el._anim = el.animate(frames, { duration: 620, easing: "cubic-bezier(0.3, 1.3, 0.5, 1)" });
+  }
+
+  renderVals() {
+    const p = this.props;
+    return {
+      rootRef: this.rootRef, toneRef: this.toneRef, ruleRef: this.ruleRef, fiberRef: this.fiberRef,
+      foldRef: this.foldRef, grainLightRef: this.grainLightRef, grainDarkRef: this.grainDarkRef,
+      letterRef: this.letterRef, introRef: this.introRef,
+      iconHover: () => this.playSfx("icon"),
+      cvHref: p.cvUrl || LINKS.cv || "#",
+      linkedinHref: p.linkedinUrl || LINKS.linkedin || "#",
+      githubHref: p.githubUrl || LINKS.github || "#",
+      pinterestHref: p.pinterestUrl || LINKS.pinterest || "#"
+    };
+  }
+}
+</script>
+</body>
+
+</html>
